@@ -1,0 +1,10 @@
+Create the following variables 
+
+x, y, z
+
+assign the values 10, 5.4, 2 to the variables respectively.
+then print out the solutions to the following problems;
+x multiply y
+x divide z
+
+Use python to also the datatypes of the variables of x, y, z
