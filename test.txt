@@ -12,3 +12,17 @@ x subtract y (-)
 y add z (+)
 
 Use python to also print the datatypes of the variables of x, y, z
+
+
+
+
+
+You are given the list 
+
+data = [2,"Angel", 5, 6, 7.9, "Jabari",
+"Jayden",2.3, True, "List", False "George", "Risper"]
+
+Create a file named listass.py and perform the following operations on the list
+1. Print the length of the list
+2. Print all integers in the list
+3. Print out all the items in the list
