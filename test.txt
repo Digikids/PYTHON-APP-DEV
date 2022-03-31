@@ -15,8 +15,6 @@ Use python to also print the datatypes of the variables of x, y, z
 
 
 
-
-
 You are given the list 
 
 data = [2,"Angel", 5, 6, 7.9, "Jabari",
@@ -26,3 +24,15 @@ Create a file named listass.py and perform the following operations on the list
 1. Print the length of the list
 2. Print all integers in the list
 3. Print out all the items in the list
+
+
+Create a file called whileass.py and solve the following problems
+
+1. Write a program to print first 10 integers
+    and their squares using while loop.
+
+2. Write for loop statement to print the following series:
+    10, 20, 30 … … 300
+
+3. Write a while loop statement to print the following series
+    105, 98, 91 ………7
