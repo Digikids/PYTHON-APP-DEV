@@ -73,16 +73,19 @@ window.mainloop()
 
 Keep in mind your code may look different
 
-The Button widget is used to add buttons in a Python application. These buttons can display 
-text or images that convey the purpose of the buttons. You can attach a function or a method 
+BUTTONS
+The Button widget is used to add buttons in a Python application.
+These buttons can display
+text or images that convey the purpose of the buttons.
+You can attach a function or a method
 to a button which is called automatically when you click the button.
 Syntax
 Here is the simple syntax to create this widget −
-w = Button ( master, option=value, ... )
+w = Button (master, option=value, ... )
 Parameters
 master − This represents the parent window.
 options − Here is the list of most commonly used options for this widget.
-These options 
+These options
 can be used as key-value pairs separated by commas.
 
 1 activebackground
@@ -100,28 +103,28 @@ Normal foreground (text) color.
 7 font
 Text font to be used for the button's label.
 8 height
-Height of the button in text lines (for textual buttons) or pixels 
+Height of the button in text lines (for textual buttons) or pixels
 (for images).
 9 highlightcolor
 The color of the focus highlight when the widget has focus.
 10 image
 Image to be displayed on the button (instead of text).
 11 justify
-How to show multiple text lines: LEFT to left-justify each line; 
+How to show multiple text lines: LEFT to left-justify each line;
 CENTER to center them; or RIGHT to right-justify.
 12 padx
 Additional padding left and right of the text.
 13 pady
 Additional padding above and below the text.
 14 relief
-Relief specifies the type of the border. Some of the values are 
+Relief specifies the type of the border. Some of the values are
 SUNKEN, RAISED, GROOVE, and RIDGE.
 15 state
-Set this option to DISABLED to gray out the button and make it unresponsive. 
+Set this option to DISABLED to gray out the button and make it unresponsive.
 Has the value ACTIVE when the mouse is over it. Default is NORMAL.
 16 underline
 Default is -1, meaning that no character of the text on the button
-will be underlined. If nonnegative, the corresponding text character will 
+will be underlined. If nonnegative, the corresponding text character will
 be underlined.
 17 width
 Width of the button in letters (if displaying text) or pixels (if
@@ -134,7 +137,7 @@ Methods
 Following are commonly used methods for this widget −
 Method & Description
 1 flash()
-Causes the button to flash several times between active and normal colors. 
+Causes the button to flash several times between active and normal colors.
 Leaves the button in the state it was in originally. Ignored if the button is disabled.
 2 invoke()
 Calls the button's callback, and returns what that function returns.
@@ -157,16 +160,16 @@ top.mainloop()
 Python - Tkinter Entry
 
 The Entry widget is used to accept single-line text strings from a user.
-If you want to display multiple lines of text that can be edited, then 
+If you want to display multiple lines of text that can be edited, then
 you should use the Text widget.
-If you want to display one or more lines of text that cannot be modified 
+If you want to display one or more lines of text that cannot be modified
 by the user, then you should use the Label widget.
 Syntax
 Here is the simple syntax to create this widget −
 w = Entry( master, option, ... )
 Parameters
 master − This represents the parent window.
-options − Here is the list of most commonly used options for this widget. 
+options − Here is the list of most commonly used options for this widget.
 These options can be used as key-value pairs separated by commas.
 Option & Description
 1 bg
@@ -188,10 +191,10 @@ The color used to render the text.
 8 highlightcolor
 The color of the focus highlight when the checkbutton has the focus.
 9 justify
-If the text contains multiple lines, this option controls how the text is 
+If the text contains multiple lines, this option controls how the text is
 justified: CENTER, LEFT, or RIGHT.
 10 relief
-With the default value, relief=FLAT, the checkbutton does not stand out from 
+With the default value, relief=FLAT, the checkbutton does not stand out from
 its background. You may set this option to any of the other styles
 11 selectbackground
 The background color to use displaying selected text.
@@ -210,7 +213,7 @@ In order to be able to retrieve the current text from your entry widget,
 you must set this option to an instance of the StringVar class.
 17 width
 The default width of a checkbutton is determined by the size of the displayed
-image or text. You can set this option to a number of characters and the checkbutton 
+image or text. You can set this option to a number of characters and the checkbutton
 will always have room for that many characters.
 18 xscrollcommand
 If you expect that users will often enter more text than the onscreen size of
@@ -222,14 +225,14 @@ Following are commonly used methods for this widget −
 Method & Description
 1 delete ( first, last=None )
 Deletes characters from the widget, starting with the one at index first,
-up to but not including the character at position last. If the second argument is 
+up to but not including the character at position last. If the second argument is
 omitted, only the single character at position first is deleted.
 2 get()
 Returns the entry's current text as a string.
 3 icursor ( index )
 Set the insertion cursor just before the character at the given index.
 4 index ( index )
-Shift the contents of the entry so that the character at the given index is 
+Shift the contents of the entry so that the character at the given index is
 the leftmost visible character. Has no effect if the text fits entirely within the entry.
 5 insert ( index, s )
 Inserts string s before the character at the given index.
@@ -250,7 +253,7 @@ Selects all the text from the ANCHOR position up to but not including the charac
 This method is useful in linking the Entry widget to a horizontal scrollbar.
 13 xview_scroll ( number, what )
 Used to scroll the entry horizontally. The what argument must be either UNITS, to scroll by
-character widths, or PAGES, to scroll by chunks the size of the entry widget. The number is positive to 
+character widths, or PAGES, to scroll by chunks the size of the entry widget. The number is positive to
 scroll left to right, negative to scroll right to left.
 
 Example

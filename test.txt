@@ -56,3 +56,11 @@ for the following problems
 	5  *  10  =  50
 3. Write a program to check whether a number is prime or not using while loop.
 4. Write a function to print first 10 integers and their squares using while loop.
+
+
+create a file called sampleapp.py
+
+add the following widgets to the app
+1. Button with the name Button1 
+2. Label that displays the text -> Creating an app on my own
+3. Entry widget with the lable my_name
