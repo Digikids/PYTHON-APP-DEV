@@ -9,6 +9,7 @@ def entry_delete():
 def addition():
         global f_num
         f_num = ent.get()
+
         global math
         math = "Addition"
         ent.delete(0, END)
@@ -38,19 +39,19 @@ def equals():
         second_number = ent.get()
         ent.delete(0, END)
         try:
-                if math == "Addition":
-                        ent.insert(0, int(f_num) + int(second_number))
-                elif math == "Subtraction":
-                        ent.insert(0, int(f_num) - int(second_number))
-                elif math == "Division":
-                        ent.insert(0, int(f_num) / int(second_number))
-                elif math == "Multiplication":
-                        ent.insert(0, int(f_num) * int(second_number))
-                else:
-                        pass
+            if math == "Addition":
+                    ent.insert(0, int(f_num) + int(second_number))
+            elif math == "Subtraction":
+                    ent.insert(0, int(f_num) - int(second_number))
+            elif math == "Division":
+                    ent.insert(0, int(f_num) / int(second_number))
+            elif math == "Multiplication":
+                    ent.insert(0, int(f_num) * int(second_number))
+            else:
+                    pass
         except ValueError:
-                messagebox.showwarning("Error", "Please input INTEGER values")
-
+            messagebox.showwarning("Error", "Please input interger values")
+            
 #setup
 colours = ["aquamarine3", "Red", "Black", "Yellow", "aqua"]
 surface = tkinter.Tk()
@@ -84,5 +85,6 @@ btn4.grid(row=1, column=3)
 
 btn5.grid(row=2, column=0, columnspan=2)
 btn6.grid(row=2, column=2, columnspan=2)
+
 
 surface.mainloop()
