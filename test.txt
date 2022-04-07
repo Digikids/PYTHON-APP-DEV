@@ -1,6 +1,6 @@
 Create a python file called test.py and do the following;
 
-Create the following variables 
+Create the following variables
 
 x, y, z
 
@@ -13,7 +13,7 @@ y add z (+)
 
 Use python to also print the datatypes of the variables of x, y, z
 
-You are given the list 
+You are given the list
 
 data = [2,"Angel", 5, 6, 7.9, "Jabari",
 "Jayden",2.3, True, "List", False "George", "Risper"]
@@ -61,6 +61,32 @@ for the following problems
 create a file called sampleapp.py
 
 add the following widgets to the app
-1. Button with the name Button1 
+1. Button with the name Button1
 2. Label that displays the text -> Creating an app on my own
 3. Entry widget with the lable my_name
+
+
+1.Write a Python program to print the following string in a specific format (see the output).
+Go to the editor
+Sample String : "Twinkle, twinkle, little star, How I wonder what you are! Up above the world so
+high, Like a diamond in the sky. Twinkle, twinkle, little star, How I wonder what you are"
+Output :
+
+Twinkle, twinkle, little star,
+	How I wonder what you are!
+		Up above the world so high,
+		Like a diamond in the sky.
+Twinkle, twinkle, little star,
+	How I wonder what you are
+
+print("Twinkle, twinkle, little star,")
+print("	 How I wonder what you are!")
+
+2. Write a Python program to accept a filename from the user
+and print the extension of that
+
+my_extension("table.py")
+
+3. Write a function that takes in a list of items an prints out
+its length
+HINT-> use len() to check for length

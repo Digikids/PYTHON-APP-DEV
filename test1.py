@@ -1,7 +1,65 @@
-def p_length(t):
-    print(len(t))
+from tkinter import *
+import tkinter
+from tkinter import messagebox
+from random import *
+import random
 
-p_length(['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
+#functions
+def entry_delete():
+    ent.delete(0, END)
+
+def addition():
+        global f_num
+        f_num = ent.get()
+        global math
+        math = "Addition"
+        ent.delete(0, END)
+
+def subtraction():
+        global f_num
+        f_num = ent.get()
+        global math
+        math = "Subtraction"
+        ent.delete(0, END)
+
+def division():
+        global f_num
+        f_num = ent.get()
+        global math
+        math = "Division"
+        ent.delete(0, END)
+
+def multiplication():
+        global f_num
+        f_num = ent.get()
+        global math
+        math = "Multiplication"
+        ent.delete(0, END)
+
+def equals():
+        second_number = ent.get()
+        ent.delete(0, END)
+        try:
+                if math == "Addition":
+                        ent.insert(0, int(f_num) + int(second_number))
+                elif math == "Subtraction":
+                        ent.insert(0, int(f_num) - int(second_number))
+                elif math == "Division":
+                        ent.insert(0, int(f_num) / int(second_number))
+                elif math == "Multiplication":
+                        ent.insert(0, int(f_num) * int(second_number))
+                else:
+                        pass
+        except ValueError:
+                messagebox.showwarning("Error", "Please input INTEGER values")
+
+def choose_color():
+    color = random.choice(colours)
+    return color
+
+
+#setup
+colours = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
         'linen', 'antique white', 'papaya whip', 'blanched almond', 'bisque', 'peach puff',
         'navajo white', 'lemon chiffon', 'mint cream', 'azure', 'alice blue', 'lavender',
         'lavender blush', 'misty rose', 'dark slate gray', 'dim gray', 'slate gray',
@@ -75,4 +133,60 @@ p_length(['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'ol
         'gray66', 'gray67', 'gray68', 'gray69', 'gray70', 'gray71', 'gray72', 'gray73', 'gray74',
         'gray75', 'gray76', 'gray77', 'gray78', 'gray79', 'gray80', 'gray81', 'gray82', 'gray83',
         'gray84', 'gray85', 'gray86', 'gray87', 'gray88', 'gray89', 'gray90', 'gray91', 'gray92',
-        'gray93', 'gray94', 'gray95', 'gray97', 'gray98', 'gray99'])
+        'gray93', 'gray94', 'gray95', 'gray97', 'gray98', 'gray99']
+
+def Calculator():
+        surface = tkinter.Tk()
+        surface.title("Calculator")
+        surface.geometry("550x300")
+        surface.configure(bg=choose_color())
+
+        #widgets
+        ent = tkinter.Entry(surface, bd=2, width=35, bg=choose_color(), fg=choose_color())
+        ent.grid(row=0,column=1, columnspan=2)
+
+        #buttons
+        btn1 = tkinter.Button(surface, text="+", padx=60, pady=30, bg=choose_color(),
+                activebackground=choose_color(), command=addition)
+        btn2 = tkinter.Button(surface, text="-", padx=60, pady=30, bg=choose_color(),
+                activebackground=choose_color(), command=subtraction)
+        btn3 = tkinter.Button(surface, text="X", padx=60, pady=30, bg=choose_color(),
+                activebackground=choose_color(), command=multiplication)
+        btn4 = tkinter.Button(surface, text="/", padx=60, pady=30, bg=choose_color(),
+                activebackground=choose_color(), command=division)
+
+        btn5 = tkinter.Button(surface, text="=", padx=60, pady=30, bg=choose_color(),
+                activebackground=choose_color(), command=equals)
+        btn6 = tkinter.Button(surface, text="Clear", padx=60, pady=30, bg=choose_color(),
+                activebackground=choose_color(), command=entry_delete)
+
+        btn1.grid(row=1, column=0)
+        btn2.grid(row=1, column=1)
+        btn3.grid(row=1, column=2)
+        btn4.grid(row=1, column=3)
+
+        btn5.grid(row=2, column=0, columnspan=2)
+        btn6.grid(row=2, column=2, columnspan=2)
+
+        surface.mainloop()
+
+def login_page():
+        window = Tk()
+        window.title("Login Page")
+        window.geometry("440x450")
+        window.configure(bg = "red")
+
+        l_username1 = Label(window, text="User Name", padx=40, pady=20, bg="darkviolet",
+        fg="black", width=2, height=2)
+        en_username1 = Entry(window,width=30, borderwidth=5, bg="white",
+        fg="black")
+        l_username1.grid(column=1, row=2)
+        en_username1.grid(column=2, row=2)
+
+        btn = Button(window, text="Calculator", padx=40, pady=20, bg="IndianRed4",
+        fg="black", command=Calculator)
+        btn.grid(column=1, row=3)
+
+        window.mainloop()
+
+login_page()
